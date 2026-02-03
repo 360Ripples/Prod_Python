@@ -1,3 +1,4 @@
+#user defined function with parameters and return value
 def add(a,b):
     a=(2*a)-b;
     return a+b;
