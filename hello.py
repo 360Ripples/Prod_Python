@@ -1,4 +1,5 @@
 #user defined function with parameters and return value
+# Local Python batch change
 def add(a,b):
     a=(2*a)-b;
     return a+b;
