@@ -3,7 +3,7 @@ def add(a,b):
 result = add(10,20)
 print(result)
 
-#default value for function
+ #default value for function
 def subtract(a,b=2):
     return a-b
 
@@ -18,13 +18,14 @@ def multiply(a,*d):
     for i in d:
         total*=i # total = total*i
     return total
-result = multiply(10,2,3,4,5,6,7,8,9)
+result = multiply('c',2,3,4,5,6,7,8,9)
 print(result)
 
-
+#List example
 country= []
 i=0
 def addCountry(countryName):
+    #append is like add method in java
     country.append("Country:"+countryName.capitalize())
     
 addCountry("spain")
