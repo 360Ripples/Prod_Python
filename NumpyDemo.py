@@ -125,3 +125,45 @@ print("ALL MArks > 90",np.all(marks>=90,axis=1));
 # unique and sorting
 print("Marks sort student wise ",np.sort(marks,axis=1));
 print("Marks unique student wise ",np.unique(marks));
+
+
+
+#3D  array 
+#  Store student marks year wise
+#Student 1 Year 1 → marks: 80, 85, 90 Year 2 → marks: 82, 88, 91
+#Student 2 Year 1 → marks: 70, 75, 78 Year 2 → marks: 72, 79, 81
+# x axis student Y axis year z axis marks
+# Axis 0 → Students Axis 1 → Years Axis 2 → Marks (subjects)
+marks = np.array([
+    [   # Student 1
+        [80,85,90],   # Year 1
+        [82,88,91]    # Year 2
+    ],
+
+    [   # Student 2
+        [70,75,98],   # Year 1
+        [92,79,81]    # Year 2
+    ]
+])
+
+#Axis 0 collapses students.
+#Student1 vs Student2
+#Max marks across students
+#for each year and subject
+print("3D Max marks across students for each (year, subject): ",np.max(marks,axis=0));
+
+#Axis 1 collapses years.
+#Best subject marks for each student across years
+print("3D Best subject marks for each student across years): ",np.max(marks,axis=1));
+
+#Axis 2 collapses subjects.
+#So we take max subject mark per year per student.
+print("3D Best subject score per student per year: ",np.max(marks,axis=2));
+
+#Axis 1 collapses years. . Total marks of a subject across years for a student
+print("Total marks Students: ",np.sum(marks,axis=1));
+print("Average marks Students: ",np.mean(marks,axis=1));
+
+#Axis 2 collapses subjects . . Total marks of all subjects  year for a student
+print("Total marks Students: ",np.sum(marks,axis=2));
+print("Average marks Students: ",np.mean(marks,axis=2));
