@@ -1,6 +1,7 @@
 import array as arr
-int a = new int[2][2]
 
+a = [[1, 2, 3],
+     [4, 5, 6]]
 
 def saveNumbers():
     for i in a:
